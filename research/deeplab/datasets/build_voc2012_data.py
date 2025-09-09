@@ -64,23 +64,34 @@ import tensorflow as tf
 FLAGS = tf.app.flags.FLAGS
 
 tf.app.flags.DEFINE_string('image_folder',
-                           './VOCdevkit/VOC2012/JPEGImages',
+                           './data/JPEGImages_livingroom',
                            'Folder containing images.')
 
 tf.app.flags.DEFINE_string(
     'semantic_segmentation_folder',
-    './VOCdevkit/VOC2012/SegmentationClassRaw',
+    './data/foreground_livingroom',
     'Folder containing semantic segmentation annotations.')
 
 tf.app.flags.DEFINE_string(
     'list_folder',
-    './VOCdevkit/VOC2012/ImageSets/Segmentation',
+    './data/ImageSets_livingroom',
     'Folder containing lists for training and validation')
 
 tf.app.flags.DEFINE_string(
     'output_dir',
-    './tfrecord',
+    '.uwis/tfrecords_livingroom',
     'Path to save converted SSTable of TensorFlow examples.')
+
+tf.app.flags.DEFINE_string(
+    'image_format',
+    'jpg',
+    'Image file format.')
+
+tf.app.flags.DEFINE_string(
+    'label_format',
+    'png',
+    'Segmentation label file format.')
+
 
 
 _NUM_SHARDS = 4

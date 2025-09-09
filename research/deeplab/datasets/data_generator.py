@@ -99,10 +99,18 @@ _ADE20K_INFORMATION = DatasetDescriptor(
     ignore_label=0,
 )
 
+# Add new UW-IS living-room dataset descriptor:
+_UWIS_LIVING_INFORMATION = DatasetDescriptor(
+    splits_to_sizes={'train': 180, 'val': 20},
+    num_classes=2,
+    ignore_label=255,
+)
+
 _DATASETS_INFORMATION = {
     'cityscapes': _CITYSCAPES_INFORMATION,
     'pascal_voc_seg': _PASCAL_VOC_SEG_INFORMATION,
     'ade20k': _ADE20K_INFORMATION,
+    'uwis_livingroom': _UWIS_LIVING_INFORMATION,
 }
 
 # Default file pattern of TFRecord of TensorFlow Example.
