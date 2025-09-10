@@ -110,7 +110,7 @@ flags.DEFINE_integer('learning_rate_decay_step', 2000,
 flags.DEFINE_float('learning_power', 0.9,
                    'The power value used in the poly learning policy.')
 
-flags.DEFINE_integer('training_number_of_steps', 30000,
+flags.DEFINE_integer('training_number_of_steps', 3000,                        # changed from 30000 to 3000
                      'The number of steps used for training')
 
 flags.DEFINE_float('momentum', 0.9, 'The momentum value to use')

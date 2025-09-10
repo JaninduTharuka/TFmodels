@@ -29,7 +29,7 @@ def main():
         "--train_split=train",
         "--dataset=uwis_livingroom",
         "--model_variant=xception_65",
-        "--num_clone=2",
+        "--num_clone=1",                       # changed from 2 to 1
         "--atrous_rates=6",
         "--atrous_rates=12",
         "--atrous_rates=18",
@@ -39,9 +39,9 @@ def main():
         "--optimizer=momentum",
         "--top_k_percent_pixels=0.01",
         "--hard_example_mining_step=2500",
-        "--train_batch_size=4",
-        "--log_steps=10",
-        "--save_interval_secs=600",
+        "--train_batch_size=2",                # changed from 4 to 2
+        "--log_steps=100",                     # changed from 10 to 100
+        "--save_interval_secs=1800",           # changed from 600 to 1800
         f"--training_number_of_steps={NUM_ITERATIONS}",
         f"--tf_initial_checkpoint={os.path.join(INIT_FOLDER, 'deeplabv3_pascal_train_aug/model.ckpt')}",
         "--initialize_last_layer=false",
