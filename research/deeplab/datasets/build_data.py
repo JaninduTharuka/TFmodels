@@ -52,7 +52,7 @@ class ImageReader:
 
 def _int64_list_feature(values):
     """Returns a TF-Feature of int64_list."""
-    if not isinstance(values, collections.Iterable):
+    if not isinstance(values, collections.abc.Iterable):
         values = [values]
     return tf.train.Feature(int64_list=tf.train.Int64List(value=values))
 
