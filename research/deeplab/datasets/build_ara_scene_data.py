@@ -21,8 +21,6 @@ flags.DEFINE_string('semantic_segmentation_folder', './data/foreground_livingroo
                     'Folder containing segmentation annotations.')
 flags.DEFINE_string('list_folder', './data/ImageSets_livingroom', 'Folder containing train/val split text files.')
 flags.DEFINE_string('output_dir', './uwis/tfrecord', 'Where to save the generated TFRecord files.')
-flags.DEFINE_string('image_format', 'jpg', 'Image file extension (e.g., jpg, png).')
-flags.DEFINE_string('label_format', 'png', 'Segmentation label file extension.')
 flags.DEFINE_integer('num_shards', 4, 'Number of shards per dataset split.')
 
 
